@@ -30,7 +30,13 @@ jobs:
             let count=count-1
           done
           echo "ping success"
+      - name: SSHPASS Github Action
+        uses: matheusvanzan/sshpass-action@v1
       - name: accsess ssh
+        with:
+        host: ${{ secrets.ZEROTIER_HOST_IP }}
+        user: ${{ secrets.SERVER_USER }}
+        pass: ${{ secrets.SERVER_PASS }}
         run: |
-           sshpass -p babibabun3 ssh ilham@10.242.135.28 "ls"
+           ls
 
