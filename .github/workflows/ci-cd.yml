@@ -44,6 +44,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
+            cd ci-cd-testing && git pull
             ls -a
           host: ${{ secrets.ZEROTIER_HOST_IP }}
           user: ilham
