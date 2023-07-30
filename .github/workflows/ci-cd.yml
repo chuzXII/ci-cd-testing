@@ -32,7 +32,7 @@ jobs:
           echo "ping success"
 
       - name: SSHPASS Github Action
-        uses: matheusvanzan/sshpass-action@v1
+        uses: matheusvanzan/sshpass-action@v2
         with:
           host: ${{ secrets.ZEROTIER_HOST_IP }}
           user: ${{ secrets.SERVER_USER }}
