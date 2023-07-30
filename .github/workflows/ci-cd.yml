@@ -46,7 +46,7 @@ jobs:
           command: |
             ls -a
           host: ${{ secrets.ZEROTIER_HOST_IP }}
-          user: root
+          user: ilham
           pass: ${{ secrets.SERVER_PASS }}
 
 
