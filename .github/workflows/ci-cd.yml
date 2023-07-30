@@ -42,6 +42,6 @@ jobs:
 
       - name: SSHPASS Github Action
         run: |
-          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh ${{ secrets.SERVER_USER }}@${{ secrets.ZEROTIER_HOST_IP }} "ls"
+          sshpass -p ${{ secrets.SERVER_PASS }} ssh ${{ secrets.SERVER_USER }}@${{ secrets.ZEROTIER_HOST_IP }} "ls"
 
 
