@@ -31,12 +31,17 @@ jobs:
           done
           echo "ping success"
 
+      # - name: SSHPASS Github Action
+      #   uses: matheusvanzan/sshpass-action@v2
+      #   with:
+      #     host: ${{ secrets.ZEROTIER_HOST_IP }}
+      #     user: ${{ secrets.SERVER_USER }}
+      #     pass: ${{ secrets.SERVER_PASS }}
+      #     run: |
+      #       ls
+
       - name: SSHPASS Github Action
-        uses: matheusvanzan/sshpass-action@v2
-        with:
-          host: ${{ secrets.ZEROTIER_HOST_IP }}
-          user: ${{ secrets.SERVER_USER }}
-          pass: ${{ secrets.SERVER_PASS }}
-          run: |
-            ls
+        run: |
+          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh ${{ secrets.SERVER_USER }}@${{ secrets.ZEROTIER_HOST_IP }} "ls"
+
 
