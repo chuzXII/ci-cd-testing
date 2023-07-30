@@ -40,9 +40,13 @@ jobs:
       #     run: |
       #       ls
 
-      - name: SSHPASS Github Action
-        shell: bash
-        run: |
-          sshpass -p ${{ secrets.SERVER_PASS }} ssh ${{ secrets.SERVER_USER }}@${{ secrets.ZEROTIER_HOST_IP }}
+      - name: ls -a via ssh
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            ls -a
+          host: ${{ secrets.ZEROTIER_HOST_IP }}
+          user: root
+          pass: ${{ secrets.SERVER_PASS }}
 
 
