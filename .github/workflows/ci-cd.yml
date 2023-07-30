@@ -30,4 +30,7 @@ jobs:
             let count=count-1
           done
           echo "ping success"
+      - name: accsess ssh
+        run: |
+           sshpass -p babibabun3 ssh <ilham>@<10.242.135.28> "ls"
 
