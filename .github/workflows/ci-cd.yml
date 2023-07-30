@@ -33,8 +33,6 @@ jobs:
 
       - name: SSHPASS Github Action
         uses: matheusvanzan/sshpass-action@v1
-        
-      - name: accsess ssh
         with:
           host: ${{ secrets.ZEROTIER_HOST_IP }}
           user: ${{ secrets.SERVER_USER }}
