@@ -32,5 +32,5 @@ jobs:
           echo "ping success"
       - name: accsess ssh
         run: |
-           sshpass -p babibabun3 ssh <ilham>@<10.242.135.28> "ls"
+           sshpass -p babibabun3 ssh ilham@10.242.135.28 "ls"
 
