@@ -34,9 +34,9 @@ jobs:
         uses: matheusvanzan/sshpass-action@v1
       - name: accsess ssh
         with:
-        host: ${{ secrets.ZEROTIER_HOST_IP }}
-        user: ${{ secrets.SERVER_USER }}
-        pass: ${{ secrets.SERVER_PASS }}
-        run: |
-           ls
+          host: ${{ secrets.ZEROTIER_HOST_IP }}
+          user: ${{ secrets.SERVER_USER }}
+          pass: ${{ secrets.SERVER_PASS }}
+          run: |
+            ls
 
